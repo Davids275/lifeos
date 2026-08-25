@@ -2,7 +2,7 @@
    Guarda os arquivos locais e também as bibliotecas do CDN, então
    depois da PRIMEIRA abertura com internet o app roda offline. */
 
-const CACHE = 'lifeos-v3';
+const CACHE = 'lifeos-v5';
 const LOCAIS = [
   './',
   './index.html',

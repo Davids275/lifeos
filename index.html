@@ -64,7 +64,6 @@
 .lifeos-root .mb-3{margin-bottom:0.75rem}
 .lifeos-root .mb-4{margin-bottom:1rem}
 .lifeos-root .mb-5{margin-bottom:1.25rem}
-.lifeos-root .min-h-screen{min-height:100vh}
 .lifeos-root .min-w-0{min-width:0px}
 .lifeos-root .ml-auto{margin-left:auto}
 .lifeos-root .mr-1{margin-right:0.25rem}
@@ -194,9 +193,13 @@
     padding-bottom: env(safe-area-inset-bottom);
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
-    overscroll-behavior-y: none;
   }
+  /* quem rola é a página; nada de container interno segurando o scroll */
   #root { min-height: 100vh; }
+  @media (max-width: 900px) {
+    html, body { height: auto; overflow-y: visible; }
+    #root { min-height: 0; height: auto; }
+  }
   #boot {
     position: fixed; inset: 0; display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 18px;
